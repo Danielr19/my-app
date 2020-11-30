@@ -31,7 +31,7 @@ script:
     - mvn install
     - whereis google-chrome-stable
     - whereis chromedriver
-    - mvn -Dtest=TestFacebook
+    - mvn -Dtest=TestFacebook -e
 before_install:
   - sudo apt-get update -q
   - sudo apt-get install gcc-4.8 -y
