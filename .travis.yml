@@ -15,7 +15,11 @@ install: true
 before_script:
 - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
 - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/
-- sudo ls
+-pwd
+- pwd
+- sudo pwd
+-sudo pwd
+- ls
 - cd /home/travis/virtualenv/
 - sudo ls
 - export CHROME_BIN=chromium-browser
