@@ -14,15 +14,14 @@ install: true
   - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 before_script:
 - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
-- unzip chromedriver_linux64.zip -d /home/travis/virtualenv/
--pwd
+- unzip chromedriver_linux64.zip
+- sudo ls
+- export CHROME_BIN=chromium-browser
 - pwd
 - sudo pwd
--sudo pwd
 - ls
 - cd /home/travis/virtualenv/
 - sudo ls
-- export CHROME_BIN=chromium-browser
 - mysql -e 'CREATE DATABASE alumnos;'
 - mysql -e 'USE alumnos;'
 - mysql -e 'select database();'
