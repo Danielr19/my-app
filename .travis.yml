@@ -30,7 +30,7 @@ script:
     - whereis google-chrome-stable
     - whereis chromedriver
     - mvn -Dtest=TestFacebook, TestGoogle test
-    - sleep 30
+    - sleep 100
 before_install:
   - sudo apt-get update -q
   - sudo apt-get install gcc-4.8 -y
