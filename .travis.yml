@@ -16,6 +16,8 @@ before_script:
 - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
 - unzip chromedriver_linux64.zip
 - sudo ls
+- sudo pwd
+- pwd
 - sudo ls -X
 - sudo ls -a
 - sudo ls -l
@@ -23,7 +25,6 @@ before_script:
 - pwd
 - sudo pwd
 - ls
-- cd /home/travis/virtualenv/
 - sudo ls
 - mysql -e 'CREATE DATABASE alumnos;'
 - mysql -e 'USE alumnos;'
