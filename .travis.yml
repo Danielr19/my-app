@@ -11,10 +11,11 @@ before-install:
 - sleep 3
 services: mysql
 install: true
-before_script:
 - wget http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip
 - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python2.7.9/
 - export CHROME_BIN=chromium-browser
+before_script:
+-sudo ls
 - mysql -e 'CREATE DATABASE alumnos;'
 - mysql -e 'CREATE TABLE alumnos.alumno (idAlumno int(11) NOT NULL, nombre varchar(45) DEFAULT NULL, edad int(11) DEFAULT NULL, calificacion int(11) DEFAULT NULL, email varchar(45) DEFAULT NULL, PRIMARY KEY (idAlumno));'
 script:
