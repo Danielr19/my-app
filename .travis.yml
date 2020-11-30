@@ -15,6 +15,9 @@ install: true
 before_script:
 - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
 - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/
+- sudo ls
+- cd /home/travis/virtualenv/
+- sudo ls
 - export CHROME_BIN=chromium-browser
 - mysql -e 'CREATE DATABASE alumnos;'
 - mysql -e 'USE alumnos;'
