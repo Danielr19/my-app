@@ -16,6 +16,9 @@ before_script:
 - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
 - unzip chromedriver_linux64.zip
 - sudo ls
+- sudo ls -X
+- sudo ls -a
+- sudo ls -l
 - export CHROME_BIN=chromium-browser
 - pwd
 - sudo pwd
