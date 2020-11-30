@@ -17,7 +17,7 @@ public class TestGoogle {
 
   @Before
   public void setUp() throws Exception {
-	  System.setProperty("webdriver.chrome.driver", "/home/travis/virtualenv/python2.7.9/chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "");
     driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
