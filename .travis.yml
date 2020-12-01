@@ -21,8 +21,11 @@ before_script:
     - sudo apt-get --only-upgrade install google-chrome-stable
     - sudo cp chromedriver /usr/local/bin/.
     - sudo chmod +x /usr/local/bin/chromedriver
-    - export DISPLAY=:99.0
-    - sleep 3
+    - "export DISPLAY=:99.0"
+    - "sh -e /etc/init.d/xvfb start"
+    - sleep 3 
+    - rackup  
+    - sleep 3 
     - mysql -e 'CREATE DATABASE alumnos;'
     - mysql -e 'USE alumnos;'
     - mysql -e 'select database();'
