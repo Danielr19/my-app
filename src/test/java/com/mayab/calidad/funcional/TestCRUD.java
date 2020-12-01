@@ -18,7 +18,7 @@ public class TestCRUD {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.chrome.driver", "D:\\Universidad\\Calidad y pruebas\\chromedriver_win32\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
     driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
