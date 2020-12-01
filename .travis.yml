@@ -22,9 +22,6 @@ before_script:
     - sudo cp chromedriver /usr/local/bin/.
     - sudo chmod +x /usr/local/bin/chromedriver
     - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
-    - sleep 3 
-    - rackup  
     - sleep 3 
     - mysql -e 'CREATE DATABASE alumnos;'
     - mysql -e 'USE alumnos;'
@@ -35,6 +32,10 @@ script:
     - whereis google-chrome-stable
     - whereis chromedriver
     - mvn -Dtest=TestFacebook -e
+    - sudo mv chrome_sandbox chrome-sandbox
+    - sudo chown root chrome-sandbox
+    - sudo chmod 4755 chrome-sandbox
+./chrome-wrapper
 before_install:
   - sudo apt-get update -q
   - sudo apt-get install gcc-4.8 -y
