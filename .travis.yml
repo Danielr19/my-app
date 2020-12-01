@@ -31,7 +31,6 @@ script:
     - mvn install
     - whereis google-chrome-stable
     - whereis chromedriver
-    - mvn -Dtest=TestFacebook -e
     - mvn -Dtest=TestCRUD -e
 before_install:
   - sudo apt-get update -q
