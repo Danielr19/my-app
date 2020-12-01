@@ -4,7 +4,8 @@ addons:
   chrome: stable
 language: java
 jdk: openjdk8
-services: mysql
+services: 
+- mysql
 - xvfb	
 install: true
     - wget -N https://chromedriver.storage.googleapis.com/87.0.4280.20/chromedriver_linux64.zip -P ~/
