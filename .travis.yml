@@ -22,6 +22,7 @@ before_script:
     - sudo cp chromedriver /usr/local/bin/.
     - sudo chmod +x /usr/local/bin/chromedriver
     - export DISPLAY=:99.0
+    - java -Dwebdriver.chrome.driver="<path-of-chromedriver>" -jar ~/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.56.jar
     - sleep 3 
     - mysql -e 'CREATE DATABASE alumnos;'
     - mysql -e 'USE alumnos;'
