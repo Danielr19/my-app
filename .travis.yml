@@ -33,10 +33,6 @@ script:
     - whereis google-chrome-stable
     - whereis chromedriver
     - mvn -Dtest=TestFacebook -e
-    - sudo mv chrome_sandbox chrome-sandbox
-    - sudo chown root chrome-sandbox
-    - sudo chmod 4755 chrome-sandbox
-./chrome-wrapper
 before_install:
   - sudo apt-get update -q
   - sudo apt-get install gcc-4.8 -y
